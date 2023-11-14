@@ -1,0 +1,135 @@
+body {
+  background-color: #888ca2;
+}
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Common styling for input, select, and button */
+.form-element {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+/* Modern Input Design */
+.input-container {
+  position: relative;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+input.error {
+  outline: none;
+  border-color: #f66348;
+  box-shadow: 0 0 5px rgb(131, 23, 5);
+}
+
+.errorText {
+  color: rgb(131, 23, 5);
+}
+
+/* Modern Select Design */
+.select-container {
+  position: relative;
+}
+
+select {
+  width: 108%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+select:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+select.error {
+  outline: none;
+  border-color: #f66348;
+  box-shadow: 0 0 5px rgb(131, 23, 5);
+}
+
+/* CSS for a modern h2 title */
+h2 {
+  font-family: 'Roboto', sans-serif; /* Use the 'Roboto' font */
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  border-bottom: 2px solid #4caf50;
+  padding: 5px 0;
+  margin: 20px 0;
+}
+
+/* Checkbox */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.hidden-checkbox {
+  display: none;
+}
+
+.custom-checkbox-label {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #4CAF50;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-checkbox-label::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-color: #4CAF50;
+  border-radius: 2px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.hidden-checkbox:checked + .custom-checkbox-label::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.label-text {
+  margin-left: 10px;
+  font-size: 16px;
+  color: #333; /* Text color */
+}
